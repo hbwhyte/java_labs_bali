@@ -9,5 +9,18 @@ package part_01;
  */
 
 public class Exercise_10 {
+    public static void main(String[] args) {
+        System.out.println("Her average speed is " + miles() + " miles per hour.");
+    }
 
+    public static int miles() {
+        int km = 12;
+        double kmMin = 30.5;
+
+        double kmHour = (km * 60) / kmMin;
+        double miles = kmHour * 1.6;
+        int intMiles = (int) miles;
+
+        return intMiles;
+    }
 }

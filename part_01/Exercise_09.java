@@ -8,5 +8,22 @@ package part_01;
  *
  */
 public class Exercise_09 {
+    public static void main(String[] args) {
+        System.out.println("The area is " + area() + " and the perimeter is " + perimeter());
+    }
+
+    public static double area() {
+        double w = 2.4;
+        double h = 6.4;
+        double area = h * w;
+        return area;
+    }
+
+    public static double perimeter() {
+        double w = 2.4;
+        double h = 6.4;
+        double perimeter = 2*h + 2*w;
+        return perimeter;
+    }
 
 }
