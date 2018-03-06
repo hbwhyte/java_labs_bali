@@ -12,5 +12,16 @@ import java.util.Scanner;
  */
 
 public class Exercise_03 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many feet? ");
+        int feet = scanner.nextInt();
+        System.out.println(feet + " feet is " + meters(feet) + " meters");
+    }
+
+    public static float meters(int feet) {
+        float meters = feet * .305F;
+        return meters;
+    }
 
 }

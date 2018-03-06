@@ -8,7 +8,13 @@ package part_02;
  *
  */
 public class Exercise_09 {
-
+    public static void main(String[] args) {
+        char letter = 90;
+        do {
+            System.out.println(letter);
+            letter--;
+        } while (letter > 64);
+    }
 }
 
 

@@ -13,6 +13,14 @@ import java.util.Scanner;
  */
 
 public class Exercise_04 {
-
-
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many pounds? ");
+        int lbs = scanner.nextInt();
+        System.out.println(lbs + " pounds is " + kilos(lbs) + " kilos.");
+    }
+    public static float kilos(int lbs) {
+        float kilos = lbs * 0.454F;
+        return kilos;
+    }
 }

@@ -1,7 +1,5 @@
 package part_02;
 
-import java.util.Scanner;
-
 /**
  * Part 2 Exercise 1:
  *      Celsius to Fahrenheit
@@ -14,7 +12,19 @@ import java.util.Scanner;
  *      Output should read like - "27.4 degrees celsius = 81.32 degrees fahrenheit"
  */
 
-public class Exercise_01 {
+import java.util.Scanner;
 
+public class Exercise_01 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the temperature in Celsius: ");
+        double celsius = scanner.nextDouble();
+        System.out.println(celsius + " degrees Celsius is equal to " + fahrenheit(celsius) + " degrees fahrenheit.");
+
+    }
+    public static double fahrenheit(double celsius) {
+        double f = 9 * (celsius / 5) + 32;
+        return f;
+    }
 
 }

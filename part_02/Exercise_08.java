@@ -11,6 +11,19 @@ import java.util.Scanner;
  *
  */
 public class Exercise_08 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a positive integer from 0 to 1,000,000,000: ");
+        int number = scanner.nextInt();
+        System.out.println("Your number is " + findNumber(number));
+    }
 
+    public static int findNumber(int number) {
+        int i = 0;
+        while (i != number) {
+            i++;
+        }
+        return i;
+    }
 }
 
