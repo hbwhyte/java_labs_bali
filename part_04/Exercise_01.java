@@ -2,6 +2,7 @@ package part_04;
 
 import org.jcp.xml.dsig.internal.SignerOutputStream;
 
+import java.util.Arrays;
 import java.util.Scanner;
 /**
 
@@ -15,3 +16,46 @@ import java.util.Scanner;
  Output can be on one line or many lines. However you like.
 
  */
+
+
+class Exercise_01 {
+    public static void main(String[] args) {
+        int i = 0;
+        int[] intArray = new int[10];
+
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("Please enter an integer:");
+            intArray[i] = scanner.nextInt();
+            i++;
+        } while (i < intArray.length);
+        System.out.println(Arrays.toString(evenOdd(intArray)));
+    }
+
+
+    public static int[] evenOdd(int[] intArray) {
+        int[] evenOdd = new int[intArray.length];
+        for (int i = 0; i < intArray.length; i++) {
+            if (i % 2 != 0) {
+                evenOdd[i / 2] = intArray[i];
+            } else {
+                switch (i) {
+                    case 0:
+                        evenOdd[9] = intArray[0];
+                    case 2:
+                        evenOdd[8] = intArray[2];
+                    case 4:
+                        evenOdd[7] = intArray[4];
+                    case 6:
+                        evenOdd[6] = intArray[6];
+                    case 8:
+                        evenOdd[5] = intArray[8];
+                        break;
+                    default:
+                        continue;
+                }
+            }
+        }
+        return evenOdd;
+    }
+}

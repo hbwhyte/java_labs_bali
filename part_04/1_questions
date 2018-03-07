@@ -1,49 +1,105 @@
 Answer the following questions:
 
 1) What is an array?
+    An array is an indexable, linear collection of variables of the same type, referred to by the same name.
 
 2) What the code required to create (instantiate) a String array with size 10 named "cats"?
+   String[] cats = new String[10];
 
 3) What is a multidimensional array?
+    An array of arrays. e.g. arrMulti [] []
+    This means each index of the array contains an array.
 
 4) What is the code required to create (instantiate) a 2-dimensional int array that is 6 high and 6 wide named "scores"?
+    int[][] scores = new int[6][6];
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
+    String itemTen = dogs[9];
 
 6) What is an ArrayIndexOutOfBoundsException?
+    If you try and access an item in an array for an index that doesn't exist. E.g. if you have an array named
+    arrayExample of length 5 and you try to get arrayExample[7].
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
+    int retrieved = array[array.length - 2];
 
 8) What is the maximum allowable size of an array in Java?
+    2147483642, or Integer.MAX_VALUE - 5
 
 9) What is a bubble sort?
+    It is a simple sorting algorithm used for organizing small arrays.
 
 10) How does a bubble sort work?
+    It uses a nested for loop. The inner loop (b) checks the previous element to see if they are in the right order.
+    If they are out of order, they swap positions. The outer loop keeps the program working through the whole array.
+
+    for (a = 1; a < size; a++)
+     for(b = size-1; b >= a; b--) {
+       if(nums[b-1] > nums[b]) { // if out of order
+         // exchange elements
+         t = nums[b-1];
+         nums[b-1] = nums[b];
+         nums[b] = t;
+    } }
 
 11) When might you use an irregular array? What is a good example of an irregular array?
+    If you have a large multidimensional array that is sparsely populated, it can be beneficial. For example if you
+    are looking at online shoppers by day, and certain days like Black Friday need extremely long arrays, while other
+    days need significantly shorter ones.
 
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
 
+    int[] array = new int[10];
+    for (int i = 0; i < int.length-1; i++) {
+        System.out.println(i);
+        }
+
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
 
+    int i = 0
+    int[] array = new int[10];
+    while (i < int.length-1) {
+        System.out.println(i);
+        i++;
+        }
+
 14) What is a queue?
+    A queue is a data structure class that serves as a data engine to both store and access information. It works
+    on a first in, first out (FIFO) property, like a line at the bank.
 
 15) What are the two primary operations that a queue performs?
+    put = adding something
+    get = retrieve something
 
 16) What is a stack?
+    A stack is also a data structure class that serves as a data engine to both store and access information.
 
 17) What differentiates stacks and queues?
+    Queues work on a FIFO property, but stacks work on a FILO (first in, last out) property, like a stack of plates.
 
 18) When would you use an enhanced for loop?
+    When you want to iterate over a collection, such as an array, stack, or queue.
 
 19) What is "The Collections Framework"? What classes does it include?
+    It is a set of classes that implement different data structures such as lists, vectors, sets, and maps. In addition
+    to interfaces like lists and queues, it contains classes such as ArrayList, Vector, LinkedList, PriorityQueue,
+    HashSet, LinkedHashSet, and TreeSet.
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
+    Using a nested loop, such as a for loop:
+        // Outer loop iterating the length of the first dimension of the array (less 1)
+            //Inner loop iterating through the array within the array
 
 21) What is a String?
+    It is a literal (fixed value in human readable form), which is a set of characters enclosed in quotes. They are
+    objects of the String class.
 
 22) What are a few common methods for operating on Strings?
+    You can print Strings, concatenate Strings, or pass them as variables.
+
 
 23) What does "Strings are immutable" mean?
+    You cannot change them after they have been created
 
 24) Using the CLI, how do you invoke a Java application and provide two parameters to the main method?
+    ???

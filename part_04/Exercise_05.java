@@ -13,6 +13,12 @@ package part_04;
 public class Exercise_05 {
 
     public static void main(String[] strings) {
-
+        int[] array = new int[5];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i*1111;
+        }
+        for (int a : array) {
+            System.out.println(a);
+        }
     }
 }

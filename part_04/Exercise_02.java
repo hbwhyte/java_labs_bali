@@ -7,3 +7,15 @@ package part_04;
  (ie, 2017, 2015, 2013) of the array in reverse order.
 
  */
+
+class Exercise_02 {
+    public static void main(String[] args) {
+        int[] years = new int[2017];
+        for (int i = 0; i < years.length; i++) {
+            years[i] = i+1;
+        }
+        for (int i = 2016; i > 0; i -= 2){
+            System.out.println(years[i]);
+        }
+    }
+}

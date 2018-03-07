@@ -15,6 +15,13 @@ package part_04;
 public class Exercise_03 {
 
     public static void main(String[] strings) {
-
+        int[][] multiArray = new int[5][10];
+        for (int row = 0; row < multiArray.length; row++) {
+            for (int col = 0; col < 10; col++) {
+                multiArray[row][col] = row*10 + col;
+                System.out.print(multiArray[row][col] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
