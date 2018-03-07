@@ -19,19 +19,16 @@ public class Exercise_11 {
     public static void main(String[] args) {
         int startPop = 380123456;
         int endPop = startPop + change();
-        System.out.println("The total population in 3 years will be " + change());
+        System.out.println("The total population in 3 years will be " + endPop);
     }
 
-    public static int seconds() {
-        int seconds = 3 * 365 * 24 * 60 * 60;
-        return seconds;
-
-    }
     public static int change() {
-        int births = seconds() / 6;
-        int deaths = seconds() / -12;
-        int imm = seconds() / 40;
+        int seconds = 3 * 365 * 24 * 60 * 60;
+        int births = seconds / 6;
+        int deaths = seconds / -12;
+        int imm = seconds / 40;
         int change = births + deaths + imm;
         return change;
+
     }
 }

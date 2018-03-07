@@ -9,19 +9,15 @@ package part_01;
  */
 public class Exercise_09 {
     public static void main(String[] args) {
-        System.out.println("The area is " + area() + " and the perimeter is " + perimeter());
+        System.out.println("The area is " + area(2.4, 6.4) + " and the perimeter is " + perimeter(2.4,6.4));
     }
 
-    public static double area() {
-        double w = 2.4;
-        double h = 6.4;
+    public static double area(double w, double h) {
         double area = h * w;
         return area;
     }
 
-    public static double perimeter() {
-        double w = 2.4;
-        double h = 6.4;
+    public static double perimeter(double w, double h) {
         double perimeter = 2*h + 2*w;
         return perimeter;
     }

@@ -18,7 +18,7 @@ public class Exercise_10 {
         double kmMin = 30.5;
 
         double kmHour = (km * 60) / kmMin;
-        double miles = kmHour * 1.6;
+        double miles = kmHour / 1.6;
         int intMiles = (int) miles;
 
         return intMiles;
