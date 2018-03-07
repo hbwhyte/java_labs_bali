@@ -3,64 +3,129 @@ Answer the following questions
 
 
 1) What is an instance variable?
-
+    Instance variables are variables declared outside of methods that exist as members of a class (global variables).
 
 2) How do you create a new object?
+    You need to declare and initialize it.
+
+    To declare a new object:
+
+    Class objName = new Class();
+
+    or
+
+    Class objName;
+    objName = new Class();
 
 
 3) After creating a new object, how do you set that objects instance variables?
+    Vehicle car = new Vehicle("Honda", 2006, "blue");
 
+    or
+
+    car.make = "Honda";
+    car.year = 2006;
+    car.color = "blue";
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
+    A reference variable is a variable that isn't independent, but instead REFERS to an object. You need to be careful,
+    because instead of having a copy of the variable, like with primitive types, any changes that get made to the
+    reference variable effect the original object.
 
+    e.g.
+    Vehicle car1 = new Vehicle();
+    Vehicle car2 = car1;
+
+    // car2 refers to the object of car1
 
 5) How many methods can you have in a class?
-
+    Unlimited
 
 6) How do you exit a method at any point?
-
+    return;
 
 7) What is the method signature required to return an "int" from a method?
+   public static int example() {  }
 
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
-
+    return num;
 
 9) How do you pass a parameter to a method?
+    public static int example(int a, int b) {
+    int sum = a + b;
+    return sum;
+    }
 
 
 10) What is the method signature for a method named sum() that takes two int parameters and returns their sum as in int?
-
+    public static int example(int a, int b) {  <-- this is the method signature
+        int sum = a + b;
+        return sum;
+        }
 
 11) What is a constructor?
+    A constructor initializes an object when it is created. It has the same exact name as its class (including
+    capitalization), with syntax like a method with no return type.
+
+    e.g.
+    class Example {
+        int x;
+
+        Example() {  <-- constructor
+        x = 50
+        }
 
 
 12) How does Java treat a class without a constructor?
+    Java automatically creates a default constructor
 
 
 13) What would the constructor for "public class Animal" look like?
+    String name;
+    int numLegs;
+    boolean fur;
+
+    public Animal() {   <-- constructor starts here
+        name = "Cheetah";
+        numLegs = 4;
+        fur = true;
 
 
 14) What is the effect of passing parameters to a constructor?
+    It assigns those parameters to the object of that class.
 
 
 15) When should you pass parameters to a constructor?
+    When the constructor requires them.
 
 
 16) What does the finalize() method do?
+    It helps cleanly get rid of object, such as making sure any files in use by the object are terminated.
 
 
 17) What does the "this" keyword do?
+    It refers to the current object
 
 
 18) When should you use the "this" keyword?
-
+    To refer to instance variables within your own class.
 
 19) Write an example of the "this" keyword in action.
+    class Example {
+        int age;
+        String name;
 
+        Example(int age, String name) {
+            this.age = age
+            this.name = name
+            }
+        }
 
-20.) EXplain the difference between static and non-static variables.
-
+20.) Explain the difference between static and non-static variables.
+     If you have a static variable, all objects in the class will share a reference to that single variable.
+     Non-static variables can be unique to each object.
 
 21.) Explain the difference between static and non-static methods.
-
+     Static methods exist if you want to create the method without creating an object of the containing class
+    // don't REALLY get this.

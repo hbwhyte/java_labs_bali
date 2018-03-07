@@ -1,5 +1,7 @@
 package part_03;
 
+import java.text.DecimalFormat;
+
 /**
   Write 3 classes. These classes can reside in the same file for ease and clarity.
   The first class (the controller) should have at least two methods, one of which being a main method.
@@ -12,3 +14,46 @@ package part_03;
   sports teams, trees, beers, people and so on.
 
  **/
+
+
+class BookStore {
+    public static void main(String[] args) {
+        Books toKill = new Books("To Kill a Mockingbird", 2, 19.99 );
+        Magazines vogue = new Magazines("Vogue", 1, 5.99);
+
+        double total = subtotal(toKill.quantity, toKill.price) + subtotal(vogue.quantity, vogue.price);
+        System.out.println("Your total cost is $" + df2.format(total));
+    }
+
+    private static DecimalFormat df2 = new DecimalFormat(".##");
+
+    private static double subtotal(int quantity, double price){
+        double tax = 1.05;
+        double subtotal = quantity * price * tax;
+        return subtotal;
+    }
+}
+
+class Books {
+    String title;
+    int quantity;
+    double price;
+
+    public Books(String title, int quantity, double price) {
+        this.title = title;
+        this.quantity = quantity;
+        this.price = price;
+    }
+}
+
+class Magazines {
+    String title;
+    int quantity;
+    double price;
+
+    public Magazines(String title, int quantity, double price) {
+        this.title = title;
+        this.quantity = quantity;
+        this.price = price;
+    }
+}
