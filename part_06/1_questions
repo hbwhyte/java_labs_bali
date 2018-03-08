@@ -1,22 +1,46 @@
 1) What is Java inheritance?
+    Inheritance is the ability for child classes to inherit the components of their parent classes. This makes code
+    more efficient and easier to maintain.
 
 2) How does inheritance work?
+   By using 'extends' you can create inheritance between two classes. E.g.:
+
+   class Child extends Parent { }
+
+   In this case any objects created in Child have full access to the (non-private) components of Parent,
+   although Parent does not know that Child exists.
 
 3) What are some advantages that inheritance provides?
+    Makes code more efficient to write so you aren't redoing work over and over.
+    Makes code easier to maintain, so if you update something in the parent class, it extends to all child classes.
+    You can reuse code in multiple places without worrying about functional issues.
 
 4) What does the "super" keyword do?
+    Refers to the parent class.
 
 5) In what order are constructors called when there are multiple subclasses?
+    The constructors are called from the highest level parent first, then its immediate child and so on. If there are
+    multiple child classes at the same level, e.g. class Motorcycle extends Vehicle and class Car extends Vehicle,
+    order is determined by their order in the program
 
 6) What does it mean when a method is overridden?
+    That means that the child class is overriding the method of the parent class. e.g. class Motorcycle overrides
+    the start method of class Vehicle, because it does it differently than others in the Vehicle class.
 
 7) How do overridden methods support polymorphism?
+    Overridden methods are a way that the methods can take "multiple forms" aka polymorphism. By being able to
+    override methods, the program isn't restricted to just the one way of doing things.
 
 8) What is the difference between an overloaded method and an overridden method?
+    Overloaded method can take in a variety of parameters, or different number of parameters. An overridden method is
+    one that was defined by the parent class but that the child class has redefined for its own use.
 
 9) What is dynamic method dispatch?
+    It is the way that a call to an overridden method is resolved at runtime instead of at compile time.
 
 10) What does the "final" keyword do?
+    It is when you declare a variable that should not be changed.
 
 11) Are classes in Java are a subclass of what super class?
+    Object
 
