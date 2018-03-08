@@ -41,8 +41,9 @@ class Exercise_06 {
         long twelveHour = twelveHour(currentHour);
 
         // Display results using a 12 hour clock, include AM or PM
-        System.out.println("The time is: " + twelveHour((currentHour)) + ":" + currentMinute + ":" + currentSecond
-                + " " + amPm(currentHour,twelveHour) + " in GMT " + timeZoneChange);
+        System.out.println("The time is: " + (twelveHour((currentHour))< 10 ? "0" : "") + twelveHour(currentHour) +
+                ":" + (currentMinute < 10 ? "0" : "") + currentMinute + ":" + (currentSecond < 10 ? "0" : "") +
+               currentSecond + " " + amPm(currentHour,twelveHour) + " in GMT " + timeZoneChange);
     }
 
     public static long twelveHour(long currentHour){
