@@ -5,15 +5,12 @@ public class ReptiliaClass extends TetrapodSuperClass {
     private boolean laysEggs;
     private boolean scales;
     private boolean ectothermic;
-    private String taxonomicRank;
 
     public ReptiliaClass() {
-        super();
         this.name = "Reptilia";
         this.laysEggs = true;
         this.scales = true;
         this.ectothermic = true;
-        super.setTaxonomicRank("Class");
     }
 
     public boolean isLaysEggs() {

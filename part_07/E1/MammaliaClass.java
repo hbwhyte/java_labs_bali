@@ -7,12 +7,10 @@ public class MammaliaClass extends TetrapodSuperClass {
     private boolean ectothermic;
 
     public MammaliaClass() {
-        super();
         this.name = "Mammalia";
         this.laysEggs = false;
         this.covering = "hair or fur";
         this.ectothermic = false;
-        super.setTaxonomicRank("Class");
     }
 
     public void hello() {
