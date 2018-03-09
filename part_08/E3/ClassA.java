@@ -1,5 +1,6 @@
 package part_08.E3;
 
+
 public class ClassA {
 
     public static void main(String[] args) {

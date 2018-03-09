@@ -1,39 +1,83 @@
 
 1) What is the difference between a byte stream and a character stream?
-
+    Byte streams are when you want to read/write data byte (8-bit) by byte. They are input/output streams
+    Character streams are when you want to read/write data char (16-bit) by char. They are reader/writer streams.
 
 2) List at least 3 examples of byte stream classes?
+    FileInputStream / FileOutputStream
+    BufferedInputStream / BufferedOutputStream
+    StringBufferInputStream
 
 
 3) List at least 3 examples of character stream classes?
-
+    FileReader / FileWriter
+    BufferedReader / BufferedWriter
+    StringReader / StringWriter
 
 4) What is try-with-resources? Why is it super cool?
-
+    try-with-resources is a new addition to java that automatically closes resources after the try block is done with
+    them. This way you don't need to worry about manually closing resources, or forgetting to, or having them not
+    close if an exception is thrown.
 
 5) Demonstrate a try-wth-resources block:
-
+    try (BufferedReader br = new BufferedReader(new FileReader(path)) {
+        System.out.println(br.readLine());
+        } catch (IO Exception ioe) {
+        System.out.println("IO Exception caught"
+        }
 
 6) What does the read() method on the FileInputStream class return?
-
+    It reads a byte of data from the input stream (in the case the file).
 
 7) What is the documentation above of the FileInputStream class header say? (hint: inside /** ... */)
+    For File Input Stream it says:
+        /**
+         * A <code>FileInputStream</code> obtains input bytes
+         * from a file in a file system. What files
+         * are  available depends on the host environment.
+         *
+         * <p><code>FileInputStream</code> is meant for reading streams of raw bytes
+         * such as image data. For reading streams of characters, consider using
+         * <code>FileReader</code>.
+         *
+         * @author  Arthur van Hoff
+         * @see     java.io.File
+         * @see     java.io.FileDescriptor
+         * @see     java.io.FileOutputStream
+         * @see     java.nio.file.Files#newInputStream
+         * @since   JDK1.0
+         */
+
+    For the .read() specifically:
+        /**
+         * Reads a byte of data from this input stream. This method blocks
+         * if no input is yet available.
+         *
+         * @return     the next byte of data, or <code>-1</code> if the end of the
+         *             file is reached.
+         * @exception  IOException  if an I/O error occurs.
+         */
 
 
 8) Is a DataOutputStream used for bytes or characters?
-
+    Bytes (it's an output stream not a writer)
 
 9) What is a BufferedReader?
-
+    A Buffered Reader is when the input stream reads data from a memory area called the "buffer" instead of handling it
+    directly from the underlying OS. The native input API is only accessed once the buffer is empty (the reverse is true
+    for Buffered Writers, the native output is only accessed once the buffer is full).
 
 10) Why does a BufferedReader require an InputStreamReader as an argument?
+    Because InputStreamReader deals directly with the underlying OS, while BufferedReader acts on that direct stream.
+    The internal BufferedReader method in the docs has InputStreamReader as a required param.
 
-
-11) What does the InputStreamReader dp with it's byte stream argument?
+11) What does the InputStreamReader do with it's byte stream argument?
+    It takes the byte stream argument and decodes it to into characters using a specified or default charset.
 
 
 12) What is the difference between the read() and readLine() on BufferedReader?
-
+    read() reads one byte at a time and readLine() reads one line at a time.
 
 13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
+    BufferedReader readYucatan = new BufferedReader(new FileReader(yucatan_cenotes.txt));
 
