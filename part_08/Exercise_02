@@ -1,2 +1,9 @@
 
 Complete question 10 in the self-test for chapter 9.
+
+10. What is wrong with this fragment?
+        class MyClass { // ... }
+        // ...
+        throw new MyClass();
+
+You can only throw objects of the Throwable class.

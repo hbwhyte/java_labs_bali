@@ -1,26 +1,93 @@
 1) Describe the exception hierarchy.
+    All exceptions are part of the throwable class. That class is made up of exceptions (caused by human/user/program)
+    and errors (caused by computers). One level below that are specific exceptions, such as IllegalArgumentException,
+    Arithmetic Exception, Runtime Exception etc.
 
 2) What is a try/catch statement?
+    It is a block of code where you first "try" a section of code that could cause exceptions, but
+    are ready with a "catch" statement to handle expected exceptions in a graceful way.
+    Examples of expected exceptions are if a user uses an invalid input,
+    tries to divide by zero, etc. It is the foundation of exception handling.
 
 3) Why do we use try/catch statements?
+    To handle exceptions in graceful ways, without crashing your program.
 
 4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
 
+    Scanner scanner = new Scanner(System.in);
+
+    try {
+        System.out.println("Please input an integer: ");
+        int input = scanner.nextInt();
+        int output = 10 / input;
+        return output
+        }
+        catch (InputMismatchException ime) {
+            System.out.println("Input Mismatch: please enter an integer");
+        }
+        catch (ArithmeticException ae) {
+            System.out.println("Arithmetic Exception: cannot divide by zero");
+        } finally {
+            System.out.println("Thanks for entering something!");
+        }
+
 5) What does it mean to "throw" an exception? How does it work?
+    It is forcing an exception to happen, rather than waiting for it to be caught. The keyword "throw" is what
+    throws the exception object. It has to be an object, you can't throw anything else.
 
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+    The JVM will throw an exception and exit the program. If it knows what the exception is, it will specify,
+    otherwise the super class "Exception" will be thrown which is bad because it doesn't give you any information
+    about WHAT the exception is.
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
+    Always the subclass exception, because it contains more information about what the error was
 
 8) Write a nested try/catch statement.
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.println("Please input an integer: ");
+            int input = scanner.nextInt();
+            System.out.println("Your input: " + input);
+        }
+        catch (InputMismatchException ime) {
+            System.out.println("Input Mismatch: please enter an integer");
+            try {
+                System.out.println("Second attempt - Please input an INTEGER: ");
+                input = scanner.nextInt();
+                System.out.println("Your input: " + input);
+            }
+            catch (InputMismatchException ime) {
+                System.out.println("You really don't know what an integer is, eh?");
+           }
+        }
 
 9) What does it mean to rethrow an exception?
+    It means that instead of handling the exception, you throw it to the outer catch statement to deal with.
 
 10) What are the 7 methods that come with the Throwable class?
+    I found more than 7:
+    addSuppressed, fillInStackTrace, getCause, getLocalizedMessage, getMessage, getStackTrace, getSuppressed,
+    initCause, printStackTrace, setStackTrace, toString
 
 11) What does the "finally" block do?
+    It runs no matter what. It is useful that, whether or not their are exceptions, it will run, such as closing
+    out open files after the try/catch is complete.
 
 12) When is the finally block executed? Will it ever not be executed?
+    At the end of the try/catch. No.
 
 13) What are the three recently added features to Java exceptions?
+    try-with-resources: this automates the process of releasing resources (e.g. files) used in a try statement when
+    they are no longer needed.
+
+    multi-catch: this allows 2 or more exceptions to be caught with a single catch clause, using the "or" | operator.
+        E.g.
+        catch(ArithmeticException | ArrayIndexOutOfBoundsException e) {
+    Each multi-catch parameter is implicitly final, meaning it cannot be assigned a new value.
+
+    final rethrow / more precises rethrow: this restricts the types of exceptions that can be rethrown to only those
+    checked exception that the associated try block throws, as long as they are not handled by an earlier and if they
+    are a subtype or supertype of the parameter.
