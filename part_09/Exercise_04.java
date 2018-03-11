@@ -11,7 +11,19 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 
 public class Exercise_04 {
+    public static void main(String[] args) throws SecurityException {
+        File example = new File("/Users/hbwhyte/CodingNomads/bali/java_labs_bali/part_09/E1/newExampleFile.txt");
 
+        long lastMod = example.lastModified();
+        String pattern = "yyyy-MM-dd 'at' HH:mm:ss";
+        SimpleDateFormat myFormat = new SimpleDateFormat(pattern);
+        System.out.println("File was last modified on " + myFormat.format(lastMod));
+
+        System.out.println(example.canWrite() ? "Can write to file." : "Cannot write to file.");
+
+        example.setReadOnly();
+        System.out.println(example.canWrite() ? "Can write to file." : "Cannot write to file.");
+    }
 
 }
 
