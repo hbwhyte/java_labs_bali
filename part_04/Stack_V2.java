@@ -27,7 +27,8 @@ class Stack_V2 {
         if (getloc == 0) {
             System.out.println("Sorry, the stack is empty!");
             return 0;
-        } return sArray[--getloc];
+        } --putloc;
+        return sArray[--getloc];
 
     }
 }
@@ -39,11 +40,10 @@ class StackLab {
         int height = scanner.nextInt();
 
         Stack_V2 newStack = new Stack_V2(height);
-
-        for(char c = 'a'; c < ('a'+height); c++) {
+        for (char c = 'a'; c < ('a' + height); c++) {
             newStack.push(c);
         }
-        for(char c = 'a'; c < ('a'+height); c++) {
+        for (char c = 'a'; c < ('a' + height); c++) {
             System.out.println(newStack.pop());
         }
     }
