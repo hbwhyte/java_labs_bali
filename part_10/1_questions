@@ -1,30 +1,42 @@
 
 1) What is the difference between the Thread and Runnable?
-
+    They are two different ways to implement multiple threads. If you need to change the default behavior of the
+     Thread class for any reason, then you can "extend" the Thread class. However, for basic multithreading, it is
+     easier to "implement" the runnable class.
 
 2) How do you start a thread using Runnable?
-
+    Take a class and implement Runnable. Within that class, you need to instantiate a Thread, create a constructor
+    to assign a name to the thread and call threadName.start(). Then you need to @Override the run() method.
 
 3) How do you start a thread using Thread?
-
+   Have the class extend Thread, create a constructor to instantiate the Thread and pass it a name, then @Override the
+   run() method.
 
 4) How do you get a thread's name?
-
+    Create it using a constructor.
 
 5) What does the "synchronize()" method do?
+    ???
 
 
-6) What doe the "join()" method do?
+
+6) What does the "join()" method do?
+    It allows one thread to wait for the completion of another
 
 
 7) What does the "sleep()" method do?
+    It pauses the current thread (suspends execution) for the allotted milliseconds or nanoseconds.
 
 
 8) What is the one method you must write if you're implementing the Runnable class?
+    run();
 
 
 9) Should you create that same method if you're extending Thread?
+    Yes.
 
 
 10) Why is multi-threading so cool?
+    It is a great way to maximize processing power of your CPU, which means programs can be faster and have less downtime
+    when done properly.
 
