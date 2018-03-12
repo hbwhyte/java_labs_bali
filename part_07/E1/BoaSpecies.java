@@ -3,13 +3,13 @@ package part_07.E1;
 public class BoaSpecies extends ReptiliaClass {
     private String speciesName;
     private boolean carnivore;
-    private boolean venemous;
+    private boolean venomous;
 
     public BoaSpecies() {
         super();
         this.speciesName = "Python";
         this.carnivore = true;
-        this.venemous = false;
+        this.venomous = false;
         super.setLimbs(0);
         super.setLaysEggs(false);
         super.setTaxonomicRank("Species");
@@ -24,7 +24,7 @@ public class BoaSpecies extends ReptiliaClass {
     }
 
     public void attack() {
-        System.out.println((venemous ? "Don't let me bite you!" : "I just want to give you a reallllly big hug..."));
+        System.out.println((venomous ? "Don't let me bite you!" : "I just want to give you a reallllly big hug..."));
     }
 
     @Override

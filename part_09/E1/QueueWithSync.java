@@ -18,20 +18,22 @@ class QueueWithSync {
         putloc = getloc = 0;
     }
 
-    void push(String a) {
+    void push(String a) throws InterruptedException {
         if (putloc == qArray.length) {
             System.out.println("Sorry, the queue is full!");
             return;
         }
-
+        Thread.sleep(500);
         qArray[putloc++] = a;
+
     }
 
-    String pop() {
+    String pop() throws InterruptedException {
         if (getloc == putloc) {
             System.out.println("Sorry, the queue is empty!");
             return null;
-        } return qArray[getloc++];
+        } Thread.sleep(500);
+        return qArray[getloc++];
     }
 }
 
@@ -57,7 +59,7 @@ class QueueMultithreading implements Runnable {
             System.out.println(thread.getName() + " has entered the Queue");
             lock.lock();
 
-//            try {
+            try {
                 int arrLength = 3;
                 QueueWithSync newQueue = new QueueWithSync(arrLength);
                 for (int i = 0; i < arrLength; i++) {
@@ -66,12 +68,11 @@ class QueueMultithreading implements Runnable {
                 for (int i = 0; i < arrLength; i++) {
                     System.out.println(newQueue.pop());
                 }
-//                notify();
-//            } catch (IllegalMonitorStateException ie) {
-//                System.out.println(thread.getName() + " hit IMSE.");
-//            } finally {
-//                lock.unlock();
-//            }
+            } catch (InterruptedException ie) {
+                System.out.println(thread.getName() + " was interrupted.");
+            } finally {
+                lock.unlock();
+            }
             System.out.println(thread.getName() + " exited the Queue.");
     }
 }
