@@ -4,9 +4,18 @@
        public void consume(String parameter)
    }
 
+   public interface Consumer<T> {
+        public void consume<T>
+   }
+
+
 2) What are a few advantages of using Generic types?
+    Great for creating reliable, reusable code.
+    Accepts more types without having to manually overload classes/methods/constructors.
 
 3) What is Type Erasure?
+    When a generic interface/method/class is used, and the user defines the data type, it will erase all instances
+    of the generic data type (e.g. <E>) everywhere it was called, and replace it with the chosen data type.
 
 4) Assuming the following snippet:
 
@@ -14,14 +23,30 @@
         return argument;
     }
 
-    Does this work?
+    Does this work? // Yes
     Integer i = returnType(1);
     String s = returnType("String");
 
+
 5) What is a Bounded Type Parameter?
+    When you want to create a generic, but still have some restrictions on what can or cannot be input. For example
+    if it is a math function, you would want to have a bounded type parameter because you cannot do math on Strings.
 
 6) Demonstrate the use of Generic Wildcard in a method signature:
+    public static double mathMethod(List<? extends Number> list) {//}
 
 7) What are bounded and unbounded wildcards in Generics?
+    Unbounded is <?>, and that means it is an unknown type. This is useful if you are writing a method that can
+    be implemented using functionality provided by the Object class, or if it doesn't matter what the type is,
+    such as printing a list.
+
+    Upper bounded wildcards take an unknown type and extend it downward to accept that data type and all of its
+    subtypes. method(<? extends Number> would accept any data type Number, or Int, or Double etc.
+
+    Lower bounded wildcards take an unknown type and accepts that data type and the supertypes of that type.
+    For example,  <? super Integer> would accept <Integer>, but also <Number> and <Object> --> Things that could
+    contain Integer values.
 
 8) What is difference between List<? extends T>  and  List <? super T> ?
+    List<? extends T> is an Upper Bounded Wildcard, and it will accept data type T and all of T's subclasses.
+    List<? super T> is a Lower Bounded Wildcard, and it will accept data type T and all of T's SUPERclasses.
