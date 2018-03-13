@@ -17,17 +17,17 @@ public class Exercise_05 {
         int input = scanner.nextInt();
 
         // use the && operator to see if the user's number is divisible by both 4 and 7
-        if (input%4 == 0 && input%7 == 0) {
+        if (input % 4 == 0 && input % 7 == 0) {
             andand = true;
         }
 
         // use the || operator to see if the user's number is divisible by 4 or 7
-        if (input%4 == 0 || input%7 == 0) {
+        if (input % 4 == 0 || input % 7 == 0) {
             oror = true;
         }
 
         // use the ^ operator to see if the user's number is divisible for 4 or 7 exclusively
-        if (input%4 == 0 ^ input%7 ==0) {
+        if (input % 4 == 0 ^ input % 7 ==0) {
             hat = true;
         }
 

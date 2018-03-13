@@ -24,7 +24,7 @@ Answer the following questions:
     int retrieved = array[array.length - 2];
 
 8) What is the maximum allowable size of an array in Java?
-    2147483642, or Integer.MAX_VALUE - 5
+    2,147,483,642 or Integer.MAX_VALUE - 5
 
 9) What is a bubble sort?
     It is a simple sorting algorithm used for organizing small arrays.
@@ -51,7 +51,7 @@ Answer the following questions:
 
     int[] array = new int[10];
     for (int i = 0; i < int.length-1; i++) {
-        System.out.println(i);
+        System.out.println(array[i]);
         }
 
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
@@ -59,7 +59,7 @@ Answer the following questions:
     int i = 0
     int[] array = new int[10];
     while (i < int.length-1) {
-        System.out.println(i);
+        System.out.println(array[i]);
         i++;
         }
 
@@ -78,7 +78,7 @@ Answer the following questions:
     Queues work on a FIFO property, but stacks work on a FILO (first in, last out) property, like a stack of plates.
 
 18) When would you use an enhanced for loop?
-    When you want to iterate over a collection, such as an array, stack, or queue.
+    When you want to iterate over elements of a collection, such as an array, stack, or queue.
 
 19) What is "The Collections Framework"? What classes does it include?
     It is a set of classes that implement different data structures such as lists, vectors, sets, and maps. In addition
@@ -95,11 +95,16 @@ Answer the following questions:
     objects of the String class.
 
 22) What are a few common methods for operating on Strings?
-    You can print Strings, concatenate Strings, or pass them as variables.
+    .length()
+    .charAt()
+    .subString()
+    .toString()
+    .toCharArray()
 
 
 23) What does "Strings are immutable" mean?
     You cannot change them after they have been created
 
 24) Using the CLI, how do you invoke a Java application and provide two parameters to the main method?
-    ???
+    javac appName.java // first you need to compile it
+    java className param1 param2 // then you can run it

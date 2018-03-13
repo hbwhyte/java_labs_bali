@@ -21,7 +21,7 @@ class Exercise_04 {
 
     // write a method called getMaxVal that takes in a 2D array and iterates through the array to determine the max value in array
     public static int getMaxVal(int[][] dataArray){
-        int maxVal = 0;
+        int maxVal = dataArray[0][0];
         for (int i = 0; i < dataArray.length; i++) {
             for (int j = 0; j < dataArray[i].length; j++) {
                 if (dataArray[i][j] > maxVal) {
@@ -36,15 +36,12 @@ class Exercise_04 {
 
     // write a method called getMinVal that takes in a 2D array and iterates through the array to determine the min value in array
     public static int getMinVal(int[][] dataArray) {
-        int minVal = Integer.MAX_VALUE;
-        for (int i = 0; i < dataArray.length; i++) {
-            for (int j = 0; j < dataArray[i].length; j++){
-                if (dataArray[i][j] < minVal) {
-                    minVal = dataArray[i][j];
-                } else {
-                    continue;
+        int minVal = dataArray[0][0];
+        for (int[] row: dataArray) {
+            for (int val : row) {
+                if(val < minVal) {
+                    minVal = val;
                 }
-
             }
         }
         return minVal;

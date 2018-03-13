@@ -45,18 +45,13 @@ Answer the following questions
     return;
 
 7) What is the method signature required to return an "int" from a method?
-   public static int example() {  }
-
+   int example() {  }
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
     return num;
 
 9) How do you pass a parameter to a method?
-    public static int example(int a, int b) {
-    int sum = a + b;
-    return sum;
-    }
-
+    method(parameter);
 
 10) What is the method signature for a method named sum() that takes two int parameters and returns their sum as in int?
     public static int example(int a, int b) {  <-- this is the method signature
@@ -80,7 +75,6 @@ Answer the following questions
 12) How does Java treat a class without a constructor?
     Java automatically creates a default constructor
 
-
 13) What would the constructor for "public class Animal" look like?
     String name;
     int numLegs;
@@ -91,25 +85,20 @@ Answer the following questions
         numLegs = 4;
         fur = true;
 
-
 14) What is the effect of passing parameters to a constructor?
-    It assigns those parameters to the object of that class.
-
+    It assigns/initialize those parameters to the object of that class.
 
 15) When should you pass parameters to a constructor?
     When the constructor requires them.
 
-
 16) What does the finalize() method do?
     It helps cleanly get rid of object, such as making sure any files in use by the object are terminated.
 
-
 17) What does the "this" keyword do?
-    It refers to the current object
-
+    It refers to member of the class it is in.
 
 18) When should you use the "this" keyword?
-    To refer to instance variables within your own class.
+    To refer to variables with the same name within your own class. Often used in getters, setters, and constructors
 
 19) Write an example of the "this" keyword in action.
     class Example {
@@ -125,7 +114,9 @@ Answer the following questions
 20.) Explain the difference between static and non-static variables.
      If you have a static variable, all objects in the class will share a reference to that single variable.
      Non-static variables can be unique to each object.
+     Static variables are owned by the class, not by the objects in the class.
 
 21.) Explain the difference between static and non-static methods.
      Static methods exist if you want to create the method without creating an object of the containing class
-    // don't REALLY get this.
+    E.g. non-static = getters, setters
+    e.g. static = anything in Math

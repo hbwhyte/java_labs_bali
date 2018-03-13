@@ -13,7 +13,7 @@ import java.util.Random;
 public class Exercise_04 {
 
     //main method
-    public static void main(String[] strings) throws java.io.IOException {
+    public static void main(String[] strings){
 
         //scanner to enter a number 0-2
         Scanner input = new Scanner(System.in);
@@ -28,19 +28,19 @@ public class Exercise_04 {
         int computerHand = rand.nextInt(3);
 
         //call the getHand method for the playerHand
-        getHand(playerHand);
+        String playerHandString = getHand(playerHand);
 
         //call the getHand method for the computerHand
-        getHand(computerHand);
+        String compHandString = getHand(computerHand);
 
         //create an String variable "winner" by calling the determineWinner() method with parameters computerHand and playerHand
-
+        String winner = determineWinner(computerHand, playerHand);
 
         //print out the player hand and computer hand
-        System.out.println("You chose " + getHand(playerHand) + " and the computer chose " + getHand(computerHand) + ".");
+        System.out.println("You chose " + playerHandString + " and the computer chose " + compHandString + ".");
 
         //print out the winner
-        System.out.println(determineWinner(computerHand, playerHand));
+        System.out.println(winner);
 
     }
 
@@ -49,7 +49,7 @@ public class Exercise_04 {
 
         // create a switch statement to determine each players hand - return the String, ie "scissor" that goes with the int "hand"
         // 0 = scissor, 1 = rock, 2 = paper
-        String handString = "";
+        String handString;
 
         switch (hand) {
             case 0: handString = "scissors";

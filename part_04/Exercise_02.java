@@ -14,7 +14,7 @@ class Exercise_02 {
         for (int i = 0; i < years.length; i++) {
             years[i] = i+1;
         }
-        for (int i = 2016; i > 0; i -= 2){
+        for (int i = years.length-1; i >= 0; i -= 2){
             System.out.println(years[i]);
         }
     }

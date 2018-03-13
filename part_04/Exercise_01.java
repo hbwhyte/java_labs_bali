@@ -35,26 +35,15 @@ class Exercise_01 {
 
     public static int[] evenOdd(int[] intArray) {
         int[] evenOdd = new int[intArray.length];
-        for (int i = 0; i < intArray.length; i++) {
+        for (int i = 1; i < intArray.length; i+=2) {
             if (i % 2 != 0) {
                 evenOdd[i / 2] = intArray[i];
-            } else {
-                switch (i) {
-                    case 0:
-                        evenOdd[9] = intArray[0];
-                    case 2:
-                        evenOdd[8] = intArray[2];
-                    case 4:
-                        evenOdd[7] = intArray[4];
-                    case 6:
-                        evenOdd[6] = intArray[6];
-                    case 8:
-                        evenOdd[5] = intArray[8];
-                        break;
-                    default:
-                        continue;
-                }
             }
+        }
+        int part2 = intArray.length/2;
+        for (int i = 8; i >= 0 ; i -=2) {
+            evenOdd[part2] = intArray[i];
+            part2++;
         }
         return evenOdd;
     }
