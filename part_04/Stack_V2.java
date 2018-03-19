@@ -7,7 +7,7 @@ import java.util.Scanner;
 class Stack_V2 {
 
     private char[] sArray;
-    private char putloc, getloc;
+    private int putloc, getloc;
 
     public Stack_V2(int size) {
         sArray = new char[size];

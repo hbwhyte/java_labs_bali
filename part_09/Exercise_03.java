@@ -19,7 +19,7 @@ public class Exercise_03 {
 
     static void readLine() throws IOException {
         try (BufferedReader in = new BufferedReader(
-                new FileReader("/Users/hbwhyte/CodingNomads/bali/java_labs_bali/part_09/E1/newExampleFile.txt"))) {
+                new FileReader("/Users/hbwhyte/dev_stuff/coding_nomads/bali/java_labs_bali/part_09/E1/newExampleFile.txt"))) {
             String rl;
             while((rl = in.readLine()) != null) {
                 System.out.println(rl + "(end of line)");
@@ -31,7 +31,7 @@ public class Exercise_03 {
 
     static void read() throws IOException {
         try (BufferedReader in = new BufferedReader(
-                new FileReader("/Users/hbwhyte/CodingNomads/bali/java_labs_bali/part_09/E1/newExampleFile.txt"))) {
+                new FileReader("/Users/hbwhyte/dev_stuff/coding_nomads/bali/java_labs_bali/part_09/E1/newExampleFile.txt"))) {
             int r;
             while((r = in.read()) != -1){
                 System.out.print((char) r+ ".");

@@ -5,9 +5,9 @@ Answer the following:
 
 2) Briefly explain each acm and how they differentiate from each other?
     public - can be accessed anywhere
-    protected - can only be accessed from within the same package
     private - can only be accessed from within the same class
-    default - the default setting, usually public
+    protected - can only be accessed from within the same package and within subclasses in other packages
+    default - the default setting, can only be accessed from within the same package
 
 3) Why do we use acm's?
     As part of encapsulation, this keeps our data more organized and makes sure variables/methods etc. can only be
@@ -16,15 +16,13 @@ Answer the following:
 
 4) What is the risk of not using acm's?
     Methods calling variables they shouldn't have access to, errors caused by unexpected usages of methods, security
-    breaches, SQL injections.
+    breaches.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
-    public static void example(Object car);
-    ??
+    public static void fixCar(Object car);
 
 6) Write a method signature that returns an object of type "Car".
-    public static Object example();
-    ??
+    public static Object fixCar();
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?

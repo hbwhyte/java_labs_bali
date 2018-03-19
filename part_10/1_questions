@@ -15,9 +15,8 @@
 4) How do you get a thread's name?
     Create it using a constructor.
 
-5) What does the "synchronize()" method do?
-    ???
-
+5) What does "synchronize" do?
+    It's put on a method signature, and
 
 
 6) What does the "join()" method do?

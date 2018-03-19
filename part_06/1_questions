@@ -19,9 +19,7 @@
     Refers to the parent class.
 
 5) In what order are constructors called when there are multiple subclasses?
-    The constructors are called from the highest level parent first, then its immediate child and so on. If there are
-    multiple child classes at the same level, e.g. class Motorcycle extends Vehicle and class Car extends Vehicle,
-    order is determined by their order in the program
+    The constructors are called from the highest level parent first, then its immediate child and so on.
 
 6) What does it mean when a method is overridden?
     That means that the child class is overriding the method of the parent class. e.g. class Motorcycle overrides

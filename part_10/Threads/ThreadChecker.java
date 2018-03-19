@@ -17,7 +17,6 @@ class ThreadChecker implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 
     int sum = 0;

@@ -27,7 +27,8 @@
         }
 
 6) What does the read() method on the FileInputStream class return?
-    It reads a byte of data from the input stream (in the case the file).
+    It reads a byte of data from the input stream (in the case the file) and returns an int. If it is empty, it
+    will return -1.
 
 7) What is the documentation above of the FileInputStream class header say? (hint: inside /** ... */)
     For File Input Stream it says:
@@ -76,7 +77,7 @@
 
 
 12) What is the difference between the read() and readLine() on BufferedReader?
-    read() reads one byte at a time and readLine() reads one line at a time.
+    read() reads one char at a time and readLine() reads one line at a time.
 
 13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
     BufferedReader readYucatan = new BufferedReader(new FileReader(yucatan_cenotes.txt));

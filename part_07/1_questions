@@ -31,3 +31,7 @@
 
 10) How many interfaces can a single class implement?
     No specific limit - it can be more than one.
+
+11) What is a default interface method?
+    A NON abstract method that has a default behaviour. This is useful for adding in methods to an interface that
+    makes it more backwards compatible.
